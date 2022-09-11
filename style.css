@@ -1,0 +1,139 @@
+*{
+    border:0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+
+}
+.container{
+   max-width: 1200px;
+    margin: 10px auto;
+    display:grid;
+    grid-template-columns:25% auto auto auto;
+   /* height: 90vh; */
+    /* grid-template-rows: repeat(7,1fr); */
+    grid-template-areas: 'nav nav nav nav'
+                          'slidebar main main main'
+                          'footer footer footer footer'
+    ;
+     gap: 5px;   
+     
+}
+
+.navbar{
+    height: 200px;
+   grid-area: nav;
+    background-color: aqua;
+}
+.slidebar{
+    grid-area: slidebar;
+    background-color: blueviolet;
+    
+
+}
+.main{
+    grid-area: main;
+    background-color: chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+   justify-content: center;
+   width: 100%
+   
+}
+.main div{
+   
+    height: 350px;
+  
+}
+.main  :last-child{
+   
+    background-color: black;
+}
+.footer{
+    height: 120px;
+    grid-area: footer;
+    background-color: darksalmon;
+}
+
+.content1{
+   
+    background-color: brown;
+    grid-area: content1;
+}
+
+.content2{
+    background-color: cornflowerblue;
+   
+    grid-area: content2;
+}
+.content3{
+    background-color: darkorange;
+   
+    grid-area: content3;
+}
+.content4{
+    
+    background-color: darkslateblue;
+    grid-area: content4;
+}
+.content5{
+  
+    background-color: gold;
+    grid-area: content5;
+    
+}
+.content6{
+   
+    background-color: rgb(255, 0, 221);
+    grid-area: content6;
+}
+.content7{
+   
+    background-color: rgb(51, 0, 255);
+    grid-area: content7;
+}
+.content8{
+   
+    background-color: rgb(255, 119, 0);
+    grid-area: content8;;
+
+}
+.content9{
+   
+    background-color: rgb(25, 0, 255);
+    grid-area: nav;
+    grid-area: content9;
+}
+.content10{
+   
+    background-color: rgb(255, 0, 0);
+    grid-area: content10;
+}
+
+@media only screen and (max-width: 550px){
+.container
+{
+
+
+    grid-template-columns: 1fr;
+   /* height: 90vh; */
+    /* grid-template-rows: repeat(7,1fr); */
+    grid-template-areas: 'nav '
+                          'slidebar'
+                          'main'
+                          'footer'
+    ;
+     gap: 5px; 
+
+}
+.main div{
+   width: 100%;
+   
+}
+
+}
+
+
